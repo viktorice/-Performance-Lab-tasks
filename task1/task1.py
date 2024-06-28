@@ -18,4 +18,4 @@ def circular_array(array_length, length_interval):
         if j == '1':
             break
 
-circular_array(5, 4)
+circular_array(int(input()), int(input()))
