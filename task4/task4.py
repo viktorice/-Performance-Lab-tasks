@@ -5,8 +5,7 @@ def minimum_number_of_moves(txt):
     number_of_moves = []
     for i in range(len(array)):
         amount = 0
-        nums = []
-        nums.append(array[i])
+        nums = [array[i]]
         nums *= len(array)
         for k in range(len(array)):
             amount += abs(nums[i] - array[k])
