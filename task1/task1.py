@@ -1,4 +1,5 @@
 def circular_array(array_length, length_interval):
+    global j
     num_1 = ''
     num_2 = ''
     x = 0
@@ -17,5 +18,6 @@ def circular_array(array_length, length_interval):
                 num_1 = num_1[length_interval - 1:]
         if j == '1':
             break
+
 
 circular_array(int(input()), int(input()))
