@@ -12,4 +12,5 @@ def minimum_number_of_moves(txt):
         number_of_moves.append(amount)
     print(min(number_of_moves))
 
+
 minimum_number_of_moves('numbers.txt')
