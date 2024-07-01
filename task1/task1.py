@@ -6,7 +6,7 @@ def circular_array(array_length, length_interval):
     y = 0
     for i in range(1, array_length + 1):
         num_1.append(str(i))
-    num_1 = num_1 * length_interval * 2
+    num_1 = num_1 * length_interval ** 2
     while True:
         for j in num_1[:length_interval]:
             num_2.append(j)
