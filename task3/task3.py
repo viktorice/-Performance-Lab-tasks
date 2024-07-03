@@ -1,9 +1,18 @@
+import argparse
 import json
 
-with open('tests.json', 'r') as file:
+parser = argparse.ArgumentParser()
+
+parser.add_argument('file1', type=str)
+parser.add_argument('file2', type=str)
+parser.add_argument('file3', type=str)
+
+args = parser.parse_args()
+
+with open(args.file1, 'r') as file:
     tests_content = json.load(file)
 
-with open('values.json', 'r') as file:
+with open(args.file2, 'r') as file:
     values_content = json.load(file)
 
 values_dict = {value['id']: value['value'] for value in values_content['values']}
@@ -23,5 +32,5 @@ for test in tests_content['tests']:
     fill_values(test_copy)
     report['tests'].append(test_copy)
 
-with open('report.json', 'w') as report_file:
+with open(args.file3, 'w') as report_file:
     json.dump(report, report_file, indent=4)

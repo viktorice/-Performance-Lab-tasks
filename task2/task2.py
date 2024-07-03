@@ -1,4 +1,12 @@
 from math import *
+import argparse
+
+parser = argparse.ArgumentParser()
+
+parser.add_argument('file1', type=str)
+parser.add_argument('file2', type=str)
+
+args = parser.parse_args()
 
 
 def point_position(txt_1, txt_2):
@@ -18,4 +26,4 @@ def point_position(txt_1, txt_2):
             print(2)
 
 
-point_position('circle.txt', 'dot.txt')
+point_position(args.file1, args.file2)

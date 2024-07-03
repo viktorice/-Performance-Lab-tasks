@@ -1,3 +1,13 @@
+import argparse
+
+parser = argparse.ArgumentParser()
+
+parser.add_argument('num1', type=int)
+parser.add_argument('num2', type=int)
+
+args = parser.parse_args()
+
+
 def circular_array(array_length, length_interval):
     global j
     num_1 = []
@@ -20,4 +30,4 @@ def circular_array(array_length, length_interval):
             break
 
 
-circular_array(int(input()), int(input()))
+circular_array(args.num1, args.num2)

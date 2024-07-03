@@ -1,3 +1,12 @@
+import argparse
+
+parser = argparse.ArgumentParser()
+
+parser.add_argument('file', type=str)
+
+args = parser.parse_args()
+
+
 def minimum_number_of_moves(txt):
     with open(txt) as file:
         array = [row.strip() for row in file]
@@ -13,4 +22,4 @@ def minimum_number_of_moves(txt):
     print(min(number_of_moves))
 
 
-minimum_number_of_moves('numbers.txt')
+minimum_number_of_moves(args.file)
